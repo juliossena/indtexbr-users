@@ -31,7 +31,6 @@ export const auth = async (req: Request, res: Response): Promise<Response> => {
     if (!comparePassword) {
       return notFound(res);
     }
-
     res.json({ user });
   } catch (e) {
     logger.error(e);
